@@ -28,7 +28,7 @@ app.MapGet("/robot-commands/{id:int}", (int id) =>
     return Results.Ok(new { Id = id, Command = robotCommands[id] });
 });
 
-app.MapPost("/robot-commands", ([FromBody] RobotCommand newCommand) =>
+
 {
     if (string.IsNullOrWhiteSpace(newCommand.Command))
     {
