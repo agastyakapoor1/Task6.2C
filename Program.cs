@@ -57,7 +57,7 @@ app.MapPut("/robot-commands/{id:int}", (int id, [FromBody] RobotCommand command)
 
 app.MapGet("/robot-map", () =>
 {
-    var map = new { Width = 5, Height = 5 };
+
     return Results.Ok(map);
 });
 
